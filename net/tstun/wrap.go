@@ -173,7 +173,7 @@ type Wrapper struct {
 // See the comment in the middle of Wrap.Read.
 type tunReadResult struct {
 	// Only one of err, packet or data should be set, and are read in that order
-	// of precendence.
+	// of precedence.
 	err    error
 	packet *stack.PacketBuffer
 	data   []byte
@@ -412,7 +412,7 @@ func (t *Wrapper) poll() {
 }
 
 // sendBufferConsumed does t.bufferConsumed <- struct{}{}.
-// It protects against any panics or data races that that send could cause.
+// It protects against any panics or data races that send could cause.
 func (t *Wrapper) sendBufferConsumed() {
 	defer allowSendOnClosedChannel()
 	t.bufferConsumedMu.Lock()
@@ -421,7 +421,7 @@ func (t *Wrapper) sendBufferConsumed() {
 }
 
 // sendOutbound does t.outboundMu <- r.
-// It protects against any panics or data races that that send could cause.
+// It protects against any panics or data races that send could cause.
 func (t *Wrapper) sendOutbound(r tunReadResult) {
 	defer allowSendOnClosedChannel()
 	t.outboundMu.Lock()

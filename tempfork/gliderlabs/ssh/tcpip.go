@@ -138,8 +138,8 @@ func (h *ForwardedTCPHandler) HandleSSHRequest(ctx Context, srv *Server, req *go
 					// TODO: log accept failure
 					break
 				}
-				originAddr, orignPortStr, _ := net.SplitHostPort(c.RemoteAddr().String())
-				originPort, _ := strconv.Atoi(orignPortStr)
+				originAddr, originPortStr, _ := net.SplitHostPort(c.RemoteAddr().String())
+				originPort, _ := strconv.Atoi(originPortStr)
 				payload := gossh.Marshal(&remoteForwardChannelData{
 					DestAddr:   reqPayload.BindAddr,
 					DestPort:   uint32(destPort),

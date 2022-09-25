@@ -2216,7 +2216,7 @@ func (b *LocalBackend) peerAPIServicesLocked() (ret []tailcfg.Service) {
 // possibly after mangling the given hostinfo.
 //
 // TODO(danderson): we shouldn't be mangling hostinfo here after
-// painstakingly constructing it in twelvety other places.
+// painstakingly constructing it in twelve other places.
 func (b *LocalBackend) doSetHostinfoFilterServices(hi *tailcfg.Hostinfo) {
 	if hi == nil {
 		b.logf("[unexpected] doSetHostinfoFilterServices with nil hostinfo")

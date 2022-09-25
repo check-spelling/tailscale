@@ -58,7 +58,7 @@ Also, you can [join our Slack](http://slack.gliderlabs.com) to discuss as well.
 
 ## Sponsors
 
-Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/ssh#sponsor)]
+Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/ssh#sponsor)]
 
 <a href="https://opencollective.com/ssh/sponsor/0/website" target="_blank"><img src="https://opencollective.com/ssh/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/ssh/sponsor/1/website" target="_blank"><img src="https://opencollective.com/ssh/sponsor/1/avatar.svg"></a>

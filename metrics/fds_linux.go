@@ -48,7 +48,7 @@ func currentFDs() int {
 	}
 }
 
-func direntNamlen(dirent *syscall.Dirent) int {
+func direntNamelen(dirent *syscall.Dirent) int {
 	const fixedHdr = uint16(unsafe.Offsetof(syscall.Dirent{}.Name))
 	limit := dirent.Reclen - fixedHdr
 	const dirNameLen = 256 // sizeof syscall.Dirent.Name
@@ -76,7 +76,7 @@ func parseDirEnt(dirent *syscall.Dirent, buf []byte) (consumed int, name []byte)
 	if dirent.Ino == 0 { // File absent in directory.
 		return
 	}
-	name = unsafe.Slice((*byte)(unsafe.Pointer(&dirent.Name[0])), direntNamlen(dirent))
+	name = unsafe.Slice((*byte)(unsafe.Pointer(&dirent.Name[0])), direntNamelen(dirent))
 	return
 }
 
